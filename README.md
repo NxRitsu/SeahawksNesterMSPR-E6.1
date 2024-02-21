@@ -6,9 +6,11 @@ La société "NFL IT" souhaite améliorer son efficacité opérationnelle en con
 
 ### Seahawks Harvester
 
-Permet d'afficher sur une interface WEB, la liste de tout les Seahawks Harvester et pouvoir voir le résultat du dernier scan réseau. (Voir https://github.com/NxRitsu/SeahawksHarvesterMSPR-E6.1)
+Permet d'afficher sur une interface WEB, la liste de tout les Seahawks Harvester et pouvoir voir le résultat du dernier scan réseau. 
+
+(Voir https://github.com/NxRitsu/SeahawksHarvesterMSPR-E6.1)
  
-## 🚀 Comment utiliser l’Application Seahawks Harvester ?
+## 🚀 Comment utiliser l’Application web Seahawks Nester ?
 
 ⚠️ Uniquemnent sous distribution Debian ⚠️
 
