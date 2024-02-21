@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvester Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .dashboard-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .dashboard-item {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .scan-results {
+            margin-top: 20px;
+        }
+
+        .scan-results li {
+            background-color: #2e2e2e;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .back-to-home {
+            margin-top: 20px;
+        }
+
+        h1, h2, strong {
+            color: #61dafb;
+        }
+
+        a {
+            color: #61dafb;
+        }
+
+        .btn-primary {
+            background-color: #61dafb;
+            border-color: #61dafb;
+        }
+
+        .btn-primary:hover {
+            background-color: #45a8f1;
+            border-color: #45a8f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4 mb-4 text-center">Tableau de bord Seahawks Harvester - ID {{ harvester_id }}</h1>
+
+        <div class="dashboard-container">
+            <div class="dashboard-item">
+                <h2 class="text-center mb-4">IP Address: {{ harvester_info['ip_address'] }}</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-2"><strong>Machines connectées:</strong> {{ harvester_info['connected_machines'] }}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="mb-2"><strong>Date dernier scan:</strong> {{ harvester_info['last_scan_timestamp'] }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-item scan-results">
+                <h2>Résultat du scan réseau:</h2>
+                <ul>
+                    {% for machine in harvester_info['results'] %}
+                        <li>
+                            <strong>Nom:</strong> {{ machine['name'] }}<br>
+                            <strong>IP:</strong> {{ machine['ip'] }}<br>
+                            <strong>Ports ouverts:</strong> {{ machine['open_ports'] | join(', ') }}<br>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="dashboard-item">
+                <p><strong>Latence WAN:</strong> {{ harvester_info['wan_latency'] }}</p>
+            </div>
+
+            <div class="dashboard-item back-to-home">
+                <a class="btn btn-primary" href="{{ url_for('index') }}">Retour</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

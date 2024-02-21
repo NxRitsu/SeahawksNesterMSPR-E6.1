@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seahawks Nester</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .harvesters-list {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .harvester-item {
+            background-color: #1e1e1e;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .harvester-item:hover {
+            transform: scale(1.02);
+        }
+
+        h1, h3 {
+            color: #61dafb;
+        }
+
+        a {
+            color: #61dafb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4 mb-4 text-center">Seahawks Nester</h1>
+
+        <div class="harvesters-list text-center">
+            {% for harvester_id in harvester_list %}
+                <div class="harvester-item">
+                    <h3><a href="{{ url_for('harvester_dashboard', harvester_id=harvester_id) }}">Harvester {{ harvester_id }}</a></h3>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

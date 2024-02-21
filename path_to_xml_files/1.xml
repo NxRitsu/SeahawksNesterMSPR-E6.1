@@ -1,0 +1,50 @@
+<harvester_info>
+	<ip_address>
+		192.168.100.2
+	</ip_address>
+	<connected_machines>
+		2
+	</connected_machines>
+	<last_scan>
+		<timestamp>
+			2024-02-01 21:18:00
+		</timestamp>
+		<results>
+			<machine>
+				<name>
+					192.168.100.2
+				</name>
+				<ip>
+					192.168.100.2
+				</ip>
+				<open_ports>
+					<port>
+						22/tcp
+					</port>
+					<port>
+						80/tcp
+					</port>
+				</open_ports>
+			</machine>
+			<machine>
+				<name>
+					192.168.100.3
+				</name>
+				<ip>
+					192.168.100.3
+				</ip>
+				<open_ports>
+					<port>
+						22/tcp
+					</port>
+					<port>
+						80/tcp
+					</port>
+				</open_ports>
+			</machine>
+		</results>
+	</last_scan>
+	<wan_latency>
+		18.39 ms
+	</wan_latency>
+</harvester_info>
