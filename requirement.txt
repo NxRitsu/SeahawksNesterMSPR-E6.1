@@ -1,0 +1,2 @@
+# Liste des dépendances pour le projet
+flask
