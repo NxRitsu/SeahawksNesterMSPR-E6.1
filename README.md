@@ -20,11 +20,7 @@ Permet d'afficher sur une interface WEB, la liste de tout les Seahawks Harvester
 git clone https://github.com/NxRitsu/SeahawksNesterMSPR-E6.1
 ```
 
-2. Exécuter la commande suivante (dans le dossier dossier téléchargé) :
-```
-make
-```
-Cela va alors télécharger tout les paquets nécessaire au bon fonctionnement
+2. Installer les dépendances listées dans le fichier "requirement.txt"
 
 3. Exécutez cette commande pour lancer l'application graphique Python :
 
