@@ -4,7 +4,7 @@
 
 La société "NFL IT" souhaite améliorer son efficacité opérationnelle en concevant une solution de maintenance à distance. Le projet vise à collecter des informations techniques et à assurer la maintenance à distance des réseaux locaux des franchises de la NFL.
 
-### Seahawks Harvester
+### Seahawks Nester
 
 Permet d'afficher sur une interface WEB, la liste de tout les Seahawks Harvester et pouvoir voir le résultat du dernier scan réseau. 
 
