@@ -66,4 +66,4 @@ def harvester_dashboard(harvester_id):
     return render_template('harvester_dashboard.html', harvester_id=harvester_id, harvester_info=harvester_info)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0")
